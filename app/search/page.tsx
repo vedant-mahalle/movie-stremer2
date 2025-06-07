@@ -67,7 +67,7 @@ export default function SearchPage() {
     try {
       toast.success("Starting stream...");
       // Here you can implement the streaming logic
-      console.log("Magnet link:", magnet);
+      //console.log("Magnet link:", magnet);
       
       // You can add your streaming implementation here
       // For example, redirect to a player page or start the download

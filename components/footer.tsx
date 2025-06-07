@@ -62,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} MovieStream. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} StreamFlix.</p>
         </div>
       </div>
     </footer>

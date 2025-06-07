@@ -54,9 +54,9 @@ export async function GET(request: Request) {
   }
 
   try {
-    console.log("Searching for movie:", movie);
+    //console.log("Searching for movie:", movie);
     const results = await piratebay.search(movie);
-    console.log("Search results:", results);
+    //console.log("Search results:", results);
     
     if (results && Array.isArray(results) && results.length > 0) {
       // Get movie info for each unique title
@@ -67,9 +67,9 @@ export async function GET(request: Request) {
             try {
               // Extract likely movie name from torrent name
               const cleanedTitle = cleanTitle(result.title);
-              console.log("Cleaned title:", cleanedTitle);
+              // console.log("Cleaned title:", cleanedTitle);
               const movieInfo = await getMovieInfo(cleanedTitle);
-              console.log("Movie info for", cleanedTitle, ":", movieInfo);
+              // console.log("Movie info for", cleanedTitle, ":", movieInfo);
               
               return {
                 name: result.title || 'Unknown',
@@ -106,7 +106,7 @@ export async function GET(request: Request) {
 
       return NextResponse.json({ results: validResults });
     } else {
-      console.log("No results found");
+      //console.log("No results found");
       return NextResponse.json(
         { error: 'No results found' },
         { status: 404 }

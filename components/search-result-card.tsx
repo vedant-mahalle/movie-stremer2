@@ -38,7 +38,7 @@ export function SearchResultCard({
 
   const handleStreamClick = () => {
     router.push(`/video?magnet=${(magnet)}`);
-    console.log(magnet);
+    //console.log(magnet);
     // router.push('/video')
   };
 
